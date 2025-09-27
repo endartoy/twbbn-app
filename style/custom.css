@@ -1,0 +1,83 @@
+:root {
+    --pico-form-element-spacing-vertical: 0.25rem !important;
+    --pico-form-element-spacing-horizontal: 0.5rem !important;
+
+    .text-start {
+        text-align: start;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-end {
+        text-align: end;
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
+    /* fix col auto width */
+    .col {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dialog-backdrop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dialog-content {
+        position: relative;
+    }
+}
+
+/* button and input */
+:root {
+    /* reset margin input / button */
+    button, reset, submit {
+        margin-bottom: 0;
+    }
+
+    /* Custom button color */
+    button {
+        &.warning {
+            --color: var(--pico-color-yellow-100);
+
+            background-color: var(--color);
+            color: black;
+            &:not(:disabled):hover {
+                background-color: color-mix(in srgb, white 10%, var(--color));
+            }
+        }
+
+        &.danger {
+            --color: var(--pico-color-orange-350);
+
+            background-color: var(--color);
+            color: black;
+            &:not(:disabled):hover {
+                background-color: color-mix(in srgb, white 10%, var(--color));
+            }
+        }
+
+        &.plain {
+            --color: transparent;
+
+            background-color: var(--color);
+            color: black;
+            &:not(:disabled):hover {
+                background-color: color-mix(in srgb, black 10%, var(--color));
+            }
+        }
+    }
+}
