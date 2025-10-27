@@ -12,7 +12,9 @@
 
 # Build output folders
 **/build/
-**/twbbn-app/
+
+# link to build folder
+twbbn-app
 
 # OS
 .DS_Store
